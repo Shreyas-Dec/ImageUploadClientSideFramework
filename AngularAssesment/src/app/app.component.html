@@ -1,0 +1,54 @@
+<div class="container row">
+  <div class="col-md-12">
+      <h1>Upload Image</h1>
+  </div>
+</div>
+
+<div class="container row">
+  <div class="col-md-6">
+      <input type="file" (change)="onFileChanged($event)">
+
+  </div>
+  <div class="col-md-6">
+      <input type="button" (click)="onUpload()" value="upload">
+  </div>
+</div>
+<hr />
+<div class="container row">
+  <div class="col-md-12">
+      <div *ngIf=message>{{message}}</div>
+  </div>
+</div>
+
+<div class="container row">
+  <div class="col-md-6">
+   
+</div>
+  <div class="col-md-6">
+      <input type="button" (click)="getImage()" value="Get Image">
+
+  </div>
+</div>
+
+<div class="container row" style="padding: 10px;">
+  <div class="col-md-6">
+      <input type="number" min="0" class="form-control" id="name" placeholder="Enter Number" [(ngModel)]="digitNumber"
+          name="name" />
+  </div>
+  <div class="col-md-6">
+      <input type="button" (click)="getBinary()" value="Get Binary">
+
+  </div>
+  <div class="col-md-6">
+    <div >{{binaryNumber}}</div>
+</div>
+</div>
+<div class="container row">
+  <div class="col-md-12">
+      <div *ngIf=retrievedImage>
+          <img [src]="retrievedImage">
+      </div>
+  </div>
+</div>
+
+
